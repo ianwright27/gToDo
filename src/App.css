@@ -1,0 +1,196 @@
+* {
+  margin: 0; 
+  overflow:hidden;   
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.app {
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgb(253, 253, 252);
+  display: flex;
+}
+
+.left{
+  width:100vw; 
+  height: 100vh; 
+  background-color: rgb(234, 234, 234);
+  padding: 15px; 
+}
+
+
+.navbar {
+  display: flex; 
+  justify-content: space-between;
+  padding: 20px; 
+  font-size: 14px;
+}
+
+.menu {
+  border: 2px solid #2c2c2c; 
+  border-radius: 5px; 
+  padding: 0px; 
+  font-size: 23px; 
+  background-color:#2c2c2c; 
+}
+
+.menu:hover {
+  border-color: #131313;
+  background-color: #131313; 
+  cursor: pointer;
+}
+
+.small-wrapper {
+  height: 20px !important; 
+  font-size: 12px !important; 
+  padding: 8px !important; 
+  margin-left: -20px !important; 
+}
+
+.task-wrapper {
+  width: 90%; 
+  height: 40px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border: 2px solid #8e8e8e; 
+  background-color: #f3f0f0; 
+  padding: 10px; 
+  border-radius: 5px; 
+  font-size: 14px; 
+  margin-bottom: 5px; 
+} 
+
+.task-wrapper:hover{
+  background-color: #c9c7c7; 
+  cursor: pointer; 
+}
+
+
+.task-wrapper .task {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer; 
+}
+
+.strikethrough {
+  text-decoration: line-through; 
+}
+
+.due-date {
+  font-size: 12px; 
+  text-decoration: none !important; 
+  font-weight: bold; 
+}
+
+.due-date:hover{
+  text-decoration: none !important; 
+}
+
+.task p:hover{
+  color: #2c2c2c; 
+}
+
+.task-details{
+  display: flex; 
+  justify-content: space-evenly;
+}
+.done {
+  font-size: 12px; 
+}
+
+.add-to-fav{
+  border: 2px solid #b9b7b7; 
+  border-radius: 60%; 
+  /* background: yellow;  */
+  padding: 5px; 
+} 
+
+.add-to-fav-active{
+  border: 2px solid #202020; 
+  border-radius: 60%; 
+  background-color: #202020; 
+  padding: 5px; 
+}
+
+.add-to-fav:hover{
+  border: 2px solid #494848; 
+  background-color: #494848; 
+  cursor: pointer; 
+}
+
+/* ------------------------------------------ */
+
+.right{ 
+  width: 40vw; 
+  height: 100vh; 
+  background-color:rgb(197, 197, 199); 
+  padding: 25px; 
+  padding-top: 30px; 
+  /* display: none;  */
+}
+
+.close-btn {
+  position: absolute; 
+  top: 5px; 
+  right:5px; 
+  padding: 0px; 
+  font-size: 40px; 
+  width: 40px; 
+  height: 40px; 
+  background-color: transparent;  
+  color:#706f6f; 
+  text-align: center; 
+  line-height: 0.7;
+} 
+
+.close-btn:hover{
+  color: #000; 
+  cursor: pointer; 
+}
+
+.selectedTask {
+  font-weight: bold;
+  color:rgb(58, 58, 58); 
+  margin-top: 30px; 
+  padding: 20px;
+} 
+
+#addStep{
+  background: transparent; 
+  border: none; 
+  outline: none;
+  padding-top: 10px; 
+} 
+
+.mini-steps{
+  font-size: 14px; 
+  margin-top: 10px;
+}
+
+.mini-steps li{
+  list-style: disc !important; 
+  text-decoration: wavy; 
+  font-weight: bold; 
+  color:rgb(43, 42, 42); 
+}
+
+.due-date{
+  font-weight: normal;;
+}
+
+.select-button {
+  margin: 10px; 
+  padding: 5px; ; 
+  background:rgb(230, 230, 231); 
+  border: 1px solid #2c2c2c; 
+  border-radius: 5px; 
+}
+
+.set-due-date{
+  font-size: 14px; 
+  font-weight: bold; 
+  color:rgb(90, 12, 12); 
+  text-decoration: overline;
+}
