@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../App.css"; 
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
 
@@ -9,7 +11,9 @@ const NavBar = () => {
     return (
         <div className="navbar">
             <div> <strong>Today</strong> <br></br> {fullDate}</div>
-            <div className="menu">⚙️</div>
+            <div className="menu">
+                <FontAwesomeIcon icon={faSun}></FontAwesomeIcon>
+            </div>
         </div>
     ); 
 

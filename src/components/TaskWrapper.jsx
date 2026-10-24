@@ -1,9 +1,12 @@
 import {useState} from 'react'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquare, faCheckSquare, faStar } from '@fortawesome/free-solid-svg-icons';
 import "../App.css"; 
 
 
 const TaskWrapper = ({
-    task, 
+    task,
+    onClick, 
     ...props
 }) => {
 
@@ -29,12 +32,15 @@ const TaskWrapper = ({
     }
 
     return (
-        <div className={props.size? props.size + "  task-wrapper" : "task-wrapper"}>
+        <div className={props.size? props.size + "  task-wrapper" : "task-wrapper"} onClick={onClick}>
             <div className="task">
                 {/* ✅✔️☑️ */}
                 <div className="task-details">
                     <span className="done">
-                        {completed ? "✅" : ""}
+                        {completed ? 
+                        <FontAwesomeIcon icon={faCheckSquare}/> : 
+                        <FontAwesomeIcon icon={faSquare} />
+                        }
                     </span> 
                     <p 
                     className = {completed ? "strikethrough" : ""}
@@ -44,13 +50,20 @@ const TaskWrapper = ({
                 </div>
                 
                 <span className="due-date">
-                    {task.dueDate? task.dueDate : ""}
+                    {/* {task.dueDate? task.dueDate : ""} */}
+                    {task.dueDate }
                 </span>
             </div>
-            <button className={favClick ? "add-to-fav-active" : "add-to-fav"} onClick={() => handleFavClick()}>
+            {/* <button> */}
+            <FontAwesomeIcon 
+                icon={faStar}
+                className={favClick ? "add-to-fav-active" : "add-to-fav"} 
+                onClick={() => handleFavClick()} 
+            />
+            {/* <button className={favClick ? "add-to-fav-active" : "add-to-fav"} onClick={() => handleFavClick()}>
                 {favClick ? "🌟" : "⭐"}
                 {/* 🌟 */}
-            </button>
+            {/* </button>  */}
         </div>
     ); 
 }
